@@ -2,7 +2,6 @@
 
 #include <fstream>
 #include <iostream>
-#include <locale>
 #include <random>
 #include <sstream>
 #include <string>
@@ -61,7 +60,6 @@ inline void scramble(bool &_an, bool &_ds, int &perms)
 }
 int main()
 {
-	setlocale(LC_ALL, "SPANISH");
 	std::string input;
 	std::cout << "\n";
 	std::cout << "          LLLLL  L   L  LLL   LLLLL  L   L  LLLLL  L           /   /|\n"
