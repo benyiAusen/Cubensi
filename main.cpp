@@ -1,3 +1,5 @@
+#define _VERSION_ "1.0"
+
 #include <fstream>
 #include <iostream>
 #include <locale>
@@ -29,7 +31,7 @@ inline void scramble(bool &_an, bool &_ds, int &perms)
 	if (_ds == false)
 	{
 		std::string pause; 
-		std::cout << "Algoritmo generado por Cubensi 1.0:\n";
+		std::cout << "Algoritmo generado por Cubensi " << _VERSION_ <<":\n";
 		for (int i = 0; i < perms; ++i)
 		{
 			std::cout << dict[dis(eng)];
@@ -45,7 +47,7 @@ inline void scramble(bool &_an, bool &_ds, int &perms)
 	{
 		std::ofstream gen;
 		gen.open("algoritmo.txt");
-		gen << "Algoritmo generado por Cubensi 1.0:\n";
+		gen << "Algoritmo generado por Cubensi " << _VERSION_ << ":\n";
 		for (int i = 0; i < perms; ++i)
 		{
 			gen << dict[dis(eng)];
@@ -66,7 +68,7 @@ int main()
 			     "          L      L   L  L  L  L      LL  L  L      L          /___/ |\n"
 			     "          L      L   L  LLL   LLLLL  L L L  LLLLL  L          |LLL| |\n"
 			 	 "          L      L   L  L  L  L      L  LL      L  L          |LLL| /\n"
-			 	 "          LLLLL  LLLLL  LLL   LLLLL  L   L  LLLLL  L          |LLL|/ \n          versión 1.0 y weá\n";
+			 	 "          LLLLL  LLLLL  LLL   LLLLL  L   L  LLLLL  L          |LLL|/ \n          versión " << _VERSION_ << " y weá\n";
 	
 	std::cout << "\n¿Cuántas permutaciones quieres? ";
 	std::getline(std::cin, input);
