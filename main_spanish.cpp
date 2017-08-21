@@ -11,11 +11,11 @@
 std::random_device rd; 
 std::mt19937 eng(rd()); 
 std::uniform_int_distribution<int> dis(0, 4);
-std::vector<std::string> dict = {"U","D","L","R","F"};
-std::string use_advanced_notation = "n";
-std::string destination = "c";
-int perms = 15;
-const int p_max = 400;
+std::vector<std::string> dict = {"U","D","L","R","F"}; //diccionario de movimientos
+std::string use_advanced_notation = "n"; //opción por defecto
+std::string destination = "c"; //opción por defecto
+int perms = 15; //numero por defecto de permutaciones
+const int p_max = 400; //numero máximo de permutaciones
 
 inline void scramble(bool &_an, bool &_ds, int &perms)
 {
